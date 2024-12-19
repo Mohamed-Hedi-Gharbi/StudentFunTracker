@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "student.h"
-#include "utils.h"
+#include "../include/student.h"
+#include "../include/utils.h"
 
 
 int main(){

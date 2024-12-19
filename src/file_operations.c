@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "student.h"
+#include "../include/student.h"
 
 void saveToFile(){
     FILE *file = fopen("students.txt", "w");

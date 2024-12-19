@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "student.h"
-#include "utils.h"
+#include "../include/student.h"
+#include "../include/utils.h"
 
 
 Student *students = NULL;

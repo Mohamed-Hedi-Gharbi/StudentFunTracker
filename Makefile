@@ -1,14 +1,20 @@
-cc = gcc
-CFLAGS = -Wall -Wextra
-OBJS = main.o student.o utils.o file_operations.c
+#* Déclaration des variables  
+CC = gcc
+CFLAGS = -Wall -Wextra -Iinclude
+OBJS = build/main.o build/student.o build/utils.o build/file_operations.o
 
+#* Dossier pour les exécutables
+BIN_DIR = bin
 
-gestion_dossiers: $(OBJS)
-	$(CC) $(CFLAGS) -o gestion_dossiers $(OBJS)
+#* Règle principale pour créer l'exécutable  
+$(BIN_DIR)/gestion_dossiers: $(OBJS)
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/gestion_dossiers $(OBJS) 
 
+#* Règle pour compiler les fichiers sources en objets 
+build/%.o: src/%.c
+	@mkdir -p build $(BIN_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $<
-
+#* Règle pour nettoyer les fichiers temporaires 
 clean:
-	rm -f *.o gestion_dossiers
+	rm -f build/*.o $(BIN_DIR)/gestion_dossiers
