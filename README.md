@@ -173,4 +173,3 @@ Les contributions sont les bienvenues pour améliorer ce projet ! Voici comment 
 
 --- 
 
-Avec cette version, votre `README.md` est professionnel, concis, et parfaitement adapté à un projet utilisant uniquement des fichiers texte pour la gestion des données. 🎉
